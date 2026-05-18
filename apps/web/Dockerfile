@@ -34,6 +34,7 @@ ENV FREESOUND_CLIENT_ID=${FREESOUND_CLIENT_ID:-"build-placeholder"}
 ENV FREESOUND_API_KEY=${FREESOUND_API_KEY:-"build-placeholder"}
 
 WORKDIR /app/apps/web
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN bun run build
 
 # Production image
