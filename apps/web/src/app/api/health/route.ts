@@ -1,3 +1,10 @@
 export async function GET() {
-	return new Response("OK", { status: 200 });
+	return Response.json(
+		{
+			status: "ok",
+			timestamp: Date.now(),
+			uptime: process.uptime(),
+		},
+		{ status: 200 }
+	);
 }
