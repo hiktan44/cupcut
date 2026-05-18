@@ -4,10 +4,10 @@ FROM base AS builder
 
 WORKDIR /app
 
-ARG FREESOUND_CLIENT_ID
-ARG FREESOUND_API_KEY
+ARG FREESOUND_CLIENT_ID="build-placeholder"
+ARG FREESOUND_API_KEY="build-placeholder"
 ARG NEXT_PUBLIC_MARBLE_API_URL=https://api.marblecms.com
-ARG MARBLE_WORKSPACE_KEY=build-placeholder
+ARG MARBLE_WORKSPACE_KEY="build-placeholder"
 
 COPY package.json package.json
 COPY bun.lock bun.lock
